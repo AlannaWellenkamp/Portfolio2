@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<!-- initial-scale to '1' to avoid mobile devices/smaller screens from attempting to shrink content that was already intended to be displayed properly on device screen size -->
+  <meta name="viewport" content="width=device-width" initial-scale="1">
+	<title>Alanna Wellenkamp</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+  <!-- id for use in navigation links -->
+	<header id="home">
+		<h1>Alanna Wellenkamp</h1>
+		<nav>
+			<ul>
+        <!-- navigation links directing to various locations on same page -->
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#portfolio">Projects</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+
+	</header>
+
+	<main>
+    <!-- wrapper to keep content centered and within specific portion of screen -->
+		<div class="wrapper">
+			<article>
+        <!-- classed group for flexbox purposes, id intro for navigation -->
+				<section class="group" id="intro">
+          <!-- classed item for flexbox purpsoes -->
+					<div class="item">
+						<img src="images/photo-of-alanna.jpg" alt="picture of person in beanie and glasses looking towards camera" />
+				  </div>
+          <div class="item">
+            <h2>Hi, it's me, Alanna!</h2>
+            <p>I'm currently a studdent at <a href="https://www.thinkful.com">thinkful</a>, living in Riverside California.  I'm enjoying learning about web design and plan to continue learning for years to come.</p>
+            <p>I find efficiency, cleanliness, and order to be immensely satisfying, so coding has been a thrill thus far.</p>           
+          </div>
+			</section>
+
+          <hr>
+
+          <section id="about">
+            <h2>About Me</h2>
+            <div class="group">
+            <div class="item item-2x">
+            <p>I've always been interested in and comfortable with computers and technology, and am excited to move towards working with them as a career.  I also look forward to working with others as a team to complete large scale projects beyond an individual's scope.</p>            
+            <p>I can remember writing rudimentary programs on a ti-84 calculator during art history class back in high school.  Good times.</p>
+            <p>I realized fairly late in life, at 27, that I'm trans.  It's the best thing that's happened in my life, and gave me a new motivation for personal and professional growth.</p>
+            <p>I've loved animals all my life, and after years having many pet rats, I now have two wonderful cats.</p>
+            <p>If you need someone to help bring your website idea to life, or to spruce up your current site, get in touch!</p>
+            </div>
+            <div class="item">
+              <img src="images/cats.jpg" alt="two white cats sitting and looking towards camera" />
+            </div>
+            </div>
+          </section>
+
+          <hr>
+
+          <section id="portfolio">
+            <h2>Some of my work</h2>
+            <div class="group">
+            <div class="item">
+              <h2>Walk a Sketch <small>[placeholder]</small></h2>
+              <img src="images/gps.jpg" alt="placeholder image for theoretical project" />
+              <p>This app lets you upload a simple sketch and finds a route to walk in your local area to, very roughly, draw the sketch via gps. I built it to help create fun and creativity around excercise.</p>
+              <p><a href="https://www.google.com">GitHub Repo</a></p>
+              <p>Find it <a href="https://www.google.com">here</a></p>
+            </div>
+
+            <div class="item">
+              <h2>Dog Identifier <small>[placeholder]</small></h2>
+              <img src="images/dog.jpeg" alt="placeholder image for theoretical project" />
+              <p>This app identifies the breed of a dog based on it's bark. Annoyed by your neighbor's dog and don't know which breed to be cursing out? This app is perfect for you.</p>
+              <p><a href="https://www.google.com">GitHub Repo</a></p>
+              <p>Find it <a href="https://www.google.com">here</a></p>
+            </div>
+
+            <div class="item">
+              <h2>Scenic Drives <small>[placeholder]</small></h2>
+              <img src="images/landmarks.jpeg" alt="placeholder image for theoretical project" />
+              <p>This app will direct you to your destination with a route that efficiently takes you past the most local landmarks. Build automatic and interesting breaks into a long drive.</p>
+              <p><a href="https://www.google.com">GitHub Repo</a></p>
+              <p>Find it <a href="https://www.google.com">here</a></p>
+            </div>
+            </div>
+          </section>
+
+          <hr>
+
+          <section id="contact">
+            <h2>Get in touch</h2>
+            <div class="group">
+              <div class="item">
+                <!-- fieldset to visually group inputs -->
+                <fieldset>
+                  <!-- legend to identify the group of inputs and for screen readers -->
+                  <legend>Send me a message</legend>
+                  <!-- directing form to post to formspree upon submission -->
+                  <form action="https://formspree.io/actuallyalanna@gmail.com" method="post">
+                    <!-- label for input -->
+                    <label for="name">Your Name:</label>
+                    <!-- setting id, type of input, variable to store input, and placeholder text -->
+                    <input id="input-name" type="text" name="name" placeholder="Jane Doe">
+                    <label for="email">Your Email:</label>
+                    <input id="input-email" type="text" name="email" placeholder="youremail@domain.com">
+                    <label for="message">Message:</label>
+                    <!-- textarea for larger input area than input type=text -->
+                    <textarea id="input-message" name="message" placeholder="What did you want to get in touch about?"></textarea>
+                    <!-- button to submit form -->
+                    <button type="submit">Send</button>
+                  </form>
+                </fieldset>
+
+            </div>
+            <div class="item">
+              <p><a href="mailto:actuallyalanna@gmail.com">email me</a></p>
+              <p><a href="https://www.linkedin.com/in/alanna-wellenkamp-9780981b8">My LinkedIn</a></p>
+              <p><a href="https://github.com/AlannaWellenkamp">My GitHub</a></p>
+            </div>
+            </section>
+      </article>
+
+      </div>
+    </main>
+
+  
+
+    <footer>
+      <p>© Alanna Wellenkamp</p>
+    </footer>
+    
+      
+    <script src="script.js"></script>
+  </body>
+</html>

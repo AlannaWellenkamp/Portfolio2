@@ -1,0 +1,198 @@
+/* setting box-sizing to border-box for simpler/more consistent flexbox sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* set background image for entire body, repeats by default */
+body {
+  background-image: url("images/background-tile.png");
+}
+
+/* wrapper centers content using 95% of available width */
+.wrapper {
+  width: 95%;
+  margin: auto;
+}
+
+/* set visual bar for header and footer, as well as text styling */
+header, footer {
+  font-family: "Trebuchet MS", serif;
+  background-color:rgba(143, 188, 143, 0.6);
+  text-align: center;
+  padding: 15px;
+}
+
+header h1 {font-size: 36px;}
+
+/* set nav container to display as flex justified center in a row, and raise it up a bit */
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
+  margin-top: -20px;
+}
+
+/* set the list within nav container to be flexbox in a row, and remove bullet points */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+/* style navigation links */
+nav ul li a{
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+/* remove margin from last list item in navigation bar */
+nav ul li:last-child a {
+  margin-right: 0;
+}
+
+/* text styling */
+h2, p, ul, ol, li, label, button, ::placeholder, fieldset {
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  color:black;
+}
+
+h2 {
+  font-size: 30px; 
+  text-align: center;
+}
+
+p, li, label, button, ::placeholder, fieldset {
+  font-size: 18px;
+}
+
+/* images occupy maximum width of container they are in */
+img {
+  width: 100%;
+}
+
+/* horizontal rule styling */
+hr {
+  border: 2px rgba(143, 188, 143) dashed;  
+}
+
+/* link styling within nav bar */
+nav a:link {
+  color: black;
+}
+nav a:visited {
+  color: black;
+}
+nav a:hover {
+  color: grey;
+}
+nav a:active {
+  color: white;
+}
+
+/* link styling for links within main */
+main a:link {
+  color: rgb(34, 58, 34);
+}
+main a:visited{
+  color: brown;
+}
+main a:hover{
+  color: green;
+}
+main a:active{
+  color:blue;
+}
+
+/* footer styling */
+footer {
+  height: 25px;
+  padding: 0px;
+}
+
+/* setting group class to display as flex columns for mobile or small screens */
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* setting standard item with a bit of margin and equal relative size */
+.item {
+  flex: 1;
+  margin: 10px;
+}
+
+/* classed item-2x will display as twice size of other items within flexbox */
+.item-2x {
+  flex: 2;
+}
+
+/* centering paragraphs in contact section */
+#contact p {
+  text-align: center;
+}
+
+/* forcing form labels to take up full width of container to force input onto next line, and giving a bit of space above them for visual clarity */
+form label {
+  display: block;
+  margin-top: 8px;
+}
+
+/* form input box will take up entire width available within container */
+form input, textarea {
+  width: 100%;
+}
+
+/* giving the textarea a set, and bit increased from default, height */
+form textarea {
+  height: 4em;
+}
+
+/* placeholder text to appear transparent/greyed out */
+::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* media query to adjust styling for screen widths beyond 800px */
+@media all and (min-width: 800px) {
+  /* page h1 and nav bar will now appear on the same row, on opposite ends of the screen */
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* bring nav bar down to be consistent with h1 */
+  header nav {
+    margin-top: 20px;
+  }
+
+  /* slightly adjust h1 size and give a bit of extra space from left of page */
+  header h1 {
+    font-size: 42px;
+    margin-left: 20px;
+  }
+
+  /* change flex direction from columns to rows for desktop */
+  .group {
+    flex-direction: row;
+  }
+
+  article {
+    padding: 10px;
+  }
+
+  /* reduce wrapper to 75% for desktop */
+  .wrapper {
+    width: 75%;
+  }
+
+  /* slighty change font size for desktop */
+  p, ul, ol, li {
+  font-size: 22px;
+  }
+
+  /* increase height of textarea for desktop */
+  form textarea {height: 7em;}
+}
